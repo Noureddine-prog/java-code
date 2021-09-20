@@ -9,47 +9,25 @@
 "uid":"0",
 "username":"Unknown"},
  {"id":"519",
-
 "title":"EditText - number line of EditText",
-
 "about":"in onCreate add Inside it ASD block then put this code make sure you have textview1 and edittext1 in xml",
-
 "code":"edittext1.addTextChangedListener(new TextWatcher() {\n@Override\npublic void onTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {\nfinal String _charSeq = _param1.toString();\ntextview1.setText(\"1\");\nif (LineAble) {\ncount = edittext1.getLineCount() - 1;\nline = 1;\nfor(int _repeat32 = 0; _repeat32 < (int)(count); _repeat32++) {\n_addLine();\n}\n}\n}\n@Override\npublic void beforeTextChanged(CharSequence _param1, int _param2, int _param3, int _param4) {\n}\n@Override\npublic void afterTextChanged(Editable _param1) {\n}\n});\n}\nprivate boolean LineAble = true;\nprivate double count = 0;\nprivate double line = 0;\nprivate void _addLine () {\ntextview1.setText(textview1.getText().toString().concat(\"\".concat(String.valueOf((long)(line + 1)))));\nline++;\n}\n{\n\n//Additional add with timer 400\nandroid.view.inputmethod.BaseInputConnection inputConnection = new android.view.inputmethod.BaseInputConnection(textview2, true); inputConnection.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_SPACE));\n//this will auto show line with new file opened!. like on SKManager editor.",
-
 "androidv4_supported":"1",
-
 "androidx_supported":"1",
-
 "category":"Java, widget ",
-
 "source":"",
-
 "uid":"0",
-
 "username":"Unknown"},
-{
-
-"id":"518",
-
+{"id":"518",
 "title":"Share app as apk",
-
 "about":"follow the step in code",
-
 "code":" //In onCreate; Create 1 add source directly and type this code\nStrictMode.VmPolicy.Builder builder = \nnew StrictMode.VmPolicy.Builder(); \nStrictMode.setVmPolicy(builder.build());\nif(Build.VERSION.SDK_INT>=24){ \ntry{\njava.lang.reflect.Method m = \nStrictMode.class.getMethod(\n\"disableDeathOnFileUriExposure\"); \nm.invoke(null); \n}\ncatch(Exception e){ \nshowMessage(e.toString()); \n} \n}\n__________________________________\n//Create one moreblock , named as you wish\n//Create 1 add source directly and type \"} \" without qoutes\n//Create 1 add source directly and type this code.\nprivate void shareApplication() { \nandroid.content.pm.ApplicationInfo app = \ngetApplicationContext().getApplicationInfo(); \nString filePath = app.sourceDir;\nIntent intent = new Intent(Intent.ACTION_SEND); \nintent.setType(\"*/*\"); \njava.io.File originalApk = new java.io.File(filePath); \ntry {  \njava.io.File tempFile = new java.io.File(getExternalCacheDir() + \"/ExtractedApk\"); \nif (!tempFile.isDirectory()) \nif (!tempFile.mkdirs()) \nreturn; \ntempFile = new java.io.File(tempFile.getPath() + \"/\" + \"export.apk\");\nif (!tempFile.exists()) \n{\ntry{\nif (!tempFile.createNewFile()) { \nreturn; }\n}\ncatch (java.io.IOException e){} \n} \njava.io.InputStream in = new java.io.FileInputStream (originalApk);\njava.io.OutputStream out = new java.io.FileOutputStream(tempFile);\nbyte[] buf = new byte[1024];\nint len; \nwhile ((len = in.read(buf)) > 0) { \nout.write(buf, 0, len); \n} \nin.close(); \nout.close(); \nintent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(tempFile));\nstartActivity(Intent.createChooser(intent, \"Share app via\"));\n} \ncatch (java.io.IOException e) \n{ showMessage(e.toString()); \n} \n}\r\n\r\n//Create 1 add source directly and type \"} \" without qoutes\r\n__________________________________\r\n//Create 1 button onClick and type this code\r\nshareApplication();",
-
 "androidv4_supported":"1",
-
 "androidx_supported":"1",
-
 "category":"Java",
-
 "source":"",
-
 "uid":"0",
-
-"username":"Unknown"
-
-},
+"username":"Unknown"},
 {"id":"517",
 "title":"Hide app",
 "about":"add button1 and add Inside it ASD block then put this code",
