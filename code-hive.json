@@ -8,7 +8,29 @@
 "source":"",
 "uid":"0",
 "username":"Unknown"},
+{
 
+"id":"518",
+
+"title":"Share app as apk",
+
+"about":"follow the step in code",
+
+"code":" //In onCreate; Create 1 add source directly and type this code\nStrictMode.VmPolicy.Builder builder = \nnew StrictMode.VmPolicy.Builder(); \nStrictMode.setVmPolicy(builder.build());\nif(Build.VERSION.SDK_INT>=24){ \ntry{\njava.lang.reflect.Method m = \nStrictMode.class.getMethod(\n\"disableDeathOnFileUriExposure\"); \nm.invoke(null); \n}\ncatch(Exception e){ \nshowMessage(e.toString()); \n} \n}\n__________________________________\n//Create one moreblock , named as you wish\n//Create 1 add source directly and type \"} \" without qoutes\n//Create 1 add source directly and type this code.\nprivate void shareApplication() { \nandroid.content.pm.ApplicationInfo app = \ngetApplicationContext().getApplicationInfo(); \nString filePath = app.sourceDir;\nIntent intent = new Intent(Intent.ACTION_SEND); \nintent.setType(\"*/*\"); \njava.io.File originalApk = new java.io.File(filePath); \ntry {  \njava.io.File tempFile = new java.io.File(getExternalCacheDir() + \"/ExtractedApk\"); \nif (!tempFile.isDirectory()) \nif (!tempFile.mkdirs()) \nreturn; \ntempFile = new java.io.File(tempFile.getPath() + \"/\" + \"export.apk\");\nif (!tempFile.exists()) \n{\ntry{\nif (!tempFile.createNewFile()) { \nreturn; }\n}\ncatch (java.io.IOException e){} \n} \njava.io.InputStream in = new java.io.FileInputStream (originalApk);\njava.io.OutputStream out = new java.io.FileOutputStream(tempFile);\nbyte[] buf = new byte[1024];\nint len; \nwhile ((len = in.read(buf)) > 0) { \nout.write(buf, 0, len); \n} \nin.close(); \nout.close(); \nintent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(tempFile));\nstartActivity(Intent.createChooser(intent, \"Share app via\"));\n} \ncatch (java.io.IOException e) \n{ showMessage(e.toString()); \n} \n}\r\n\r\n//Create 1 add source directly and type \"} \" without qoutes\r\n__________________________________\r\n//Create 1 button onClick and type this code\r\nshareApplication();",
+
+"androidv4_supported":"1",
+
+"androidx_supported":"1",
+
+"category":"Java",
+
+"source":"",
+
+"uid":"0",
+
+"username":"Unknown"
+
+},
 {"id":"517",
 "title":"Hide app",
 "about":"add button1 and add Inside it ASD block then put this code",
