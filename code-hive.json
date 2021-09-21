@@ -11,7 +11,7 @@
 {"id":"522",
 "title":"Check if connected or not",
 "about":"",
-"code":"boolean connected = false;\n\nConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);\n\nif (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED || connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {\nshowMessage(\"You're connected.\");\n}\nelse {\nshowMessage(\"You're Not connected.\"); \n}",
+"code":"boolean connected = false;\n\nConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);\n\nif (connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).getState() == NetworkInfo.State.CONNECTED || connectivityManager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).getState() == NetworkInfo.State.CONNECTED) {\nshowMessage(\"You're connected.\");\n}\nelse {\nshowMessage(\"You're Not connected.\"); \n}\n\n\n\// add permission\n/*\n<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />\n<uses-permission android:name=\"android.permission.INTERNET\" />\n*/",
 "androidv4_supported":"1",
 "androidx_supported":"1",
 "category":"Java, Tools",
