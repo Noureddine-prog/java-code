@@ -8,6 +8,20 @@
 "source":"",
 "uid":"0",
 "username":"Unknown"},
+{"id":"536",
+"title":"lead json file from asset ",
+"about":"add string with name mysonjson \nadd list map",
+"code":"try {\n	  java.io.InputStream ass = this.getAssets().open(\"name-file.json\");\n	           int size = ass.available();\n	           byte[] buffer = new byte[size];\n	           ass.read(buffer);\n	           ass.close();\n	           myjson = new String(buffer, \"UTF-8\");
+\n	maplist = new Gson().fromJson(myjson, new TypeToken<ArrayList<HashMap<String, Object>>>(){}.getType());
+\n	listview1.setAdapter(new Listview1Adapter(maplist));
+\n	((BaseAdapter)listview1.getAdapter()).notifyDataSetChanged();
+\n} catch(Exception e) {\n\n	 }",
+"androidv4_supported":"1",
+"androidx_supported":"1",
+"category":"Java",
+"source":"",
+"uid":"0",
+"username":"Unknown"},
 {"id":"535",
 "title":"Create ScrollView",
 "about":"",
