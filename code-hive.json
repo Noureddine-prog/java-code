@@ -79,7 +79,7 @@
 "uid":"0",
 "username":"Unknown"},
 {"id":"546",
-"title":"Create buttom Sheet ",
+"title":"Create bottom Sheet ",
 "about":"",
 "code":"final com.google.android.material.bottomsheet.BottomSheetDialog menu = new com.google.android.material.bottomsheet.BottomSheetDialog(MainActivity.this);\n\nView layBase = getLayoutInflater().inflate(R.layout.cst_about, null);\n\nmenu.setContentView(layBase);\n\n/*this code for make bottom sheet transparent. */\n\nmenu.getWindow().findViewById(R.id.design_bottom_sheet).setBackgroundResource(android.R.color.transparent);\n\nmenu.show();\nLinearLayout item1 = (LinearLayout)layBase.findViewById(R.id.linear1); \nitem1.setOnClickListener(new View.OnClickListener() {\n	public void onClick(View v) {\n		menu.dismiss();\n		showMessage(\"item1 Clicked \");\n	}\n});",
 "androidv4_supported":"1",
