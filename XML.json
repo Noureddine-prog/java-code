@@ -1,0 +1,28 @@
+[
+{
+	"id" : "1",
+    "title": "set Padding",
+    "about": " ",
+    "code" : "android:padding=\"11dp\" ",
+    "androidv4_supported": "1",
+    "androidx_supported": "1",
+    "category": "xml",
+    "source": "",
+    "uid": "0",
+    "username": "Unknown",
+    "type" : "TextView"
+    },
+    {
+	"id" : "2",
+    "title": "",
+    "about": " id her is textview1, you can chang it as you want",
+    "code" : "android:id=\"@+id/TextView1\"",
+    "androidv4_supported": "1",
+    "androidx_supported": "1",
+    "category": "xml",
+    "source": "",
+    "uid": "0",
+    "username": "Unknown",
+    "type" : "TextView"
+    }
+]
