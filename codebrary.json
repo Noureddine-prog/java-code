@@ -1,4 +1,16 @@
 [
+   {
+      "id":"665",
+"title":"RelativeLayout ",
+"about":"",
+"code":"((ViewGroup) img_content.getParent()).removeView(img_content);\n\n((ViewGroup) relativelayout_2.getParent()).removeView(relativelayout_2);\n\nandroid.widget.RelativeLayout rl = new android.widget.RelativeLayout(MainActivity.this);\n\nrl.setLayoutParams(new LinearLayout.LayoutParams(-1,-1));\n\nrelativelayout_1.removeAllViews();\n\nrelativelayout_1.addView(rl);\n\nrl.addView(img_content);\n\nrl.addView(relativelayout_2);",
+"androidv4_supported":"1",
+"androidx_supported":"1",
+"category":"Java",
+"source":"",
+"uid":"0",
+"username":"Unknown"
+},
   {
     "id": "564",
     "title": "BadgeView ",
