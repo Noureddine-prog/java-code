@@ -1,6 +1,6 @@
 [
 {
-	"id" : "1",
+    "id" : "1",
     "title": "set Padding",
     "about": " ",
     "code" : "android:padding=\"11dp\" ",
@@ -13,8 +13,8 @@
     "type" : "TextView"
     },
     {
-	"id" : "2",
-    "title": "",
+    "id" : "2",
+    "title": "set text id",
     "about": " id her is textview1, you can chang it as you want",
     "code" : "android:id=\"@+id/TextView1\"",
     "androidv4_supported": "1",
