@@ -1,16 +1,16 @@
 [
-{
-"id":"566",
-"title":"EditText in Dialog ",
-"about":"",
-"code":"LinearLayout layout = new LinearLayout(MainActivity.this);\n\nlayout.setOrientation(LinearLayout.VERTICAL);\n\nLinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);\n\nfinal EditText edittxt1 = new EditText(MainActivity.this);\n\nedittxt1.setHint(\"1 Edittext\");\n\nlayout.addView(edittxt1);\n\nedittext_1.setView(layout);",
-"androidv4_supported":"1",
-"androidx_supported":"1",
-"category":"Java",
-"source":"",
-"uid":"0",
-"username":"Unknown"
-},
+ {
+    "id": "566",
+    "title": "EditText in Dialog ",
+    "about": "create str with name : text",
+    "code": "edittext_1.setTitle(\"example Text \");\r\nLinearLayout layout \u003d new LinearLayout(MainActivity.this);\nlayout.setOrientation(LinearLayout.VERTICAL);\n\nLinearLayout.LayoutParams lp \u003d new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);\n\r\nfinal EditText edittxt1 \u003d new EditText(MainActivity.this);\nedittxt1.setHint(\"1 Edittext\");\nlayout.addView(edittxt1);\nedittext_1.setView(layout);\n\r\nedittext_1.setPositiveButton(\"Ok\", new DialogInterface.OnClickListener() {\n\t@Override\n\tpublic void onClick(DialogInterface _dialog, int _which) {\n\t\ttext \u003d edittxt1.getText().toString();\r\n\t\ttextview1.setText(text);\n\t}\n});\r\nedittext_1.setNegativeButton(\"Cancel\", new DialogInterface.OnClickListener() {\n\t@Override\n\tpublic void onClick(DialogInterface _dialog, int _which) {\n\t\t\n\t}\n});\r\nedittext_1.create().show();",
+    "androidv4_supported": "1",
+    "androidx_supported": "1",
+    "category": "Java",
+    "source": "",
+    "uid": "0",
+    "username": "Unknown"
+  },
    {
       "id":"665",
 "title":"RelativeLayout ",
